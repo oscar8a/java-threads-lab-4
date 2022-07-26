@@ -8,10 +8,10 @@ class Main {
         Thread t2 = new Thread(() -> IntStream.range(0, 30_000_000).forEach((i) -> counter.inc()));
         
         t1.start();
-        t1.join();
         t2.start();
-        t2.join();
 
+        t1.join();
+        t2.join();
 
         System.out.println(counter.getCount());
     }

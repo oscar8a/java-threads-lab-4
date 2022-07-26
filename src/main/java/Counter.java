@@ -2,7 +2,8 @@ public class Counter {
 
   long count = 0;
 
-  public void inc() {
+  // We make this method synchronized so it runs on only 1 allocated instance
+  public synchronized void inc() {
       count++;
   }
 
